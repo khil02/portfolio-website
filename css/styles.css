@@ -125,6 +125,7 @@ button:hover, button :focus,
 	display: inline-flex;
 	/* margin-left: 15px;	 */
 	justify-content: space-between;
+	align-content:end;
 }
 .navigation-list_item{
 	text-decoration: none;
