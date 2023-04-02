@@ -94,6 +94,10 @@ button:hover, button :focus,
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	list-style-type: none;
+	margin-left: 15px;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .container
 {
@@ -152,8 +156,13 @@ button:hover, button :focus,
     height: 100%;
 }
 .navigation-list li{
-	display: inline-block;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
 	/* margin-left: 15px;	 */
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .navigation-list_item{
 	text-decoration: none;
@@ -302,6 +311,9 @@ button:hover, button :focus,
 		    -ms-flex-align: center;
 		        align-items: center;
 		padding: 0;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 	.navigation-list li {
 		margin-left: 0;

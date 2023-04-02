@@ -78,6 +78,7 @@ button:hover, button :focus,
 	display: inline-flex;
 	list-style-type: none;
 	margin-left: 15px;
+	justify-content: space-between;
 }
 .container
 {
@@ -121,8 +122,9 @@ button:hover, button :focus,
     height: 100%;
 }
 .navigation-list li{
-	display: inline-block;
+	display: inline-flex;
 	/* margin-left: 15px;	 */
+	justify-content: space-between;
 }
 .navigation-list_item{
 	text-decoration: none;
@@ -234,6 +236,7 @@ button:hover, button :focus,
 		flex-direction: column;
 		align-items: center;
 		padding: 0;
+		justify-content: center;
 	}
 	.navigation-list li {
 		margin-left: 0;
