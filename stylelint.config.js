@@ -1,6 +1,5 @@
 "use strict"
-stylelint.autoFixOnSave
-Type: boolean Default: false
+
 module.exports = {
   "rules": {
     "at-rule-no-unknown": true,
@@ -89,7 +88,7 @@ module.exports = {
     "function-parentheses-newline-inside": "always-multi-line",
     "function-parentheses-space-inside": "never-single-line",
     "function-whitespace-after": "always",
-    "indentation": "tab", 
+    "indentation": 2,
     "length-zero-no-unit": true,
     "max-empty-lines": 1,
     "media-feature-colon-space-after": "always",
