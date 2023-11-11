@@ -443,3 +443,15 @@ button:hover, button :focus,
 	margin-right: auto;
 	margin-left: auto;
 }
+.input-wrapper {
+	margin-bottom: 10px;
+  }
+  
+  label {
+	display: inline-block;
+	min-width: 75px;
+  }
+  .error-message{
+	color: red;
+	font-size: .8;
+  }
