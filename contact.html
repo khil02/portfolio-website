@@ -37,14 +37,20 @@
         </div>
         <main>
             <form action="" method="post" id="contact-form">
-                <label class="standard-label" for="contact-email">Email: </label>
-                <input type="email" id="contact-email" required><br>
+                <div class="input-wrapper">
+                    <label class="standard-label" for="contact-email">Email: </label>
+                    <input type="email" id="contact-email" required><br>
+                </div>
+                
+                <div class="input-wrapper">
+                    <label class="standard-label" for="contact-phone"> Telephone: </label>
+                    <input type="tel" id="contact-phone"><br>
+                </div>
 
-                <label class="standard-label" for="contact-phone"> Telephone: </label>
-                <input type="tel" id="contact-phone"><br>
-
-                <label class="standard-label" for="contact-message">Message: </label>
-                <textarea required id="contact-message"></textarea>
+                <div class="input-wrapper">
+                    <label class="standard-label" for="contact-message">Message: </label>
+                    <textarea required id="contact-message"></textarea>
+                </div>
 
                 <input class="standard-label" type="submit" maxlength="280" value="Send message">
             </form>
@@ -63,6 +69,6 @@
             </div>
         </footer>
         <script src="js/tota11y.min.js"></script>
-        <link rel="stylesheet" href="styles.css">
+        <script src="js/scripts.js"></script>
     </body>
 </html>
