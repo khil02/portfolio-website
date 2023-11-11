@@ -162,6 +162,8 @@ button:hover, button :focus,
 	height: 30%;
 	min-width: 100px;
 	min-height: 100px;
+	max-width: 33%;
+	max-height: 33%;
   }
   /* .social_media{
 	
