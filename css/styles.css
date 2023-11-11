@@ -200,6 +200,7 @@ button:hover, button :focus,
 	background-color: lightgray;
 	width: auto;
 	min-height: auto;
+	max-width: 33%;
 }
 }
 .work_header {
