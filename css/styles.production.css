@@ -190,8 +190,8 @@ button:hover, button :focus,
 	        box-sizing: border-box;
   }
   .project-photo{
-	width: 30%;
-	height: 30%;
+	/* width: 30%;
+	height: 30%; */
 	min-width: 100px;
 	min-height: 100px;
   }
