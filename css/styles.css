@@ -158,8 +158,8 @@ button:hover, button :focus,
 	box-sizing: border-box;
   }
   .project-photo{
-	width: 30%;
-	height: 30%;
+	width: 10%;
+	height: 10%;
 	min-width: 100px;
 	min-height: 100px;
 	max-width: 200px;
