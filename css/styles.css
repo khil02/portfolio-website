@@ -67,9 +67,6 @@ button:hover, button :focus,
 	/* reduces opacity to 80% */
 	opacity: 0.8;
 }
-.button_link{
-    text-decoration: none;
-}
 .button_secondary{
 	background-color: var(--secondary-button);
 	color: var(--secondary-btntxt); 
@@ -77,8 +74,6 @@ button:hover, button :focus,
 .navigation-list {
 	display: inline-flex;
 	list-style-type: none;
-	margin-left: 15px;
-	justify-content: space-between;
 }
 .container
 {
@@ -107,6 +102,7 @@ button:hover, button :focus,
     opacity: 0.3;
     transition: all 0.3s;
 }
+
 .pullUpDown a:before
 {
     top: 0px;
@@ -122,10 +118,8 @@ button:hover, button :focus,
     height: 100%;
 }
 .navigation-list li{
-	display: inline-flex;
-	/* margin-left: 15px;	 */
-	justify-content: space-between;
-	align-content:end;
+	display: inline-block;
+	margin-left: 15px;	
 }
 .navigation-list_item{
 	text-decoration: none;
@@ -158,12 +152,12 @@ button:hover, button :focus,
 	box-sizing: border-box;
   }
   .project-photo{
-	width: 10%;
-	height: 10%;
+	width: 30%;
+	height: 30%;
 	min-width: 100px;
 	min-height: 100px;
-	max-width: 200px;
-	max-height: 200px;
+	max-width: 33%;
+	max-height: 33%;
   }
   /* .social_media{
 	
@@ -186,9 +180,6 @@ button:hover, button :focus,
 	width: 33%;
 	text-align: center;
   }
-  .grid_item a{
-	justify-self: end;
-  }
   /*grid fallback end */
  @supports (display: grid){
   .grid{
@@ -200,7 +191,6 @@ button:hover, button :focus,
 	background-color: lightgray;
 	width: auto;
 	min-height: auto;
-	max-width: 33%;
 }
 }
 .work_header {
@@ -246,7 +236,6 @@ button:hover, button :focus,
 		flex-direction: column;
 		align-items: center;
 		padding: 0;
-		justify-content: center;
 	}
 	.navigation-list li {
 		margin-left: 0;
