@@ -30,6 +30,7 @@ a {
 	color: var(--hyperlink);
 	
 }
+
 a:hover {
 	/* removes underline when hovering on link*/
 	text-decoration:none;
@@ -69,7 +70,7 @@ button:hover, button :focus,
 }
 .button_secondary{
 	background-color: var(--secondary-button);
-	color: var(--secondary-btntxt); 
+	color: var(--secondary-btntxt);	
 }
 .navigation-list {
 	display: inline-flex;
@@ -151,12 +152,27 @@ button:hover, button :focus,
   * {
 	box-sizing: border-box;
   }
-  .project-photo{
-	width: 40%;
-	height: 40%;
-	min-width: 100px;
-	min-height: 100px;
-  }
+.project-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.project-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: var(--button);
+    color: var(--button-txt);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project-links a:hover {
+    background-color: var(--active-link);
+}
+
   /* .social_media{
 	
   } */
@@ -180,16 +196,30 @@ button:hover, button :focus,
   }
   /*grid fallback end */
  @supports (display: grid){
-  .grid{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 20px;
-  }
-.grid_item{
-	background-color: lightgray;
-	width: auto;
-	min-height: auto;
+.grid_item {
+  background-color: #f9fafb; /* change this to #ffffff or #f0f4f8 if you prefer */
+  border-radius: 12px;       /* rounded corners */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* soft shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.grid_item:hover {
+  transform: translateY(-5px); /* lift on hover */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* deeper shadow on hover */
+}
+
+.grid_item h2 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.grid_item p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
 }
 .work_header {
 	text-align: center;
@@ -200,7 +230,9 @@ button:hover, button :focus,
 }
 @media all and (max-width: 750px){
 	.grid{
-		grid-gap: 10px;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 15px;
+        padding: 0 10px;
 	}
 	.grid_item:last-child{
 		grid-column: auto / auto;
@@ -210,14 +242,16 @@ button:hover, button :focus,
 		font-size: 22px;
 	}
 }
-@media all and (max-width: 750px){
+/* @media all and (max-width: 750px){
 	.grid{
 		grid-template-columns: 1fr 1fr;
 	}
-}
+} */
 @media all and (max-width:500px){
 	.grid{
 		grid-template-columns: 1fr;
+		grid-gap: 10px;
+        padding: 0 5px;
 	}
 	.page-header{
 		align-content: center;
@@ -240,6 +274,9 @@ button:hover, button :focus,
 	}
 	.logo{
 		padding-left: 40px;
+  		max-width: 100%;   /* scales down if container is smaller */
+  		height: auto;      /* maintains aspect ratio */
+  		display: block;    /* optional: remove inline spacing */
 	}
 }
 @keyframes color-change{

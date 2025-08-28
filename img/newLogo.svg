@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-refined desc-refined">
+  <title id="title-refined">Michael Sanchez — refined logo</title>
+  <desc id="desc-refined">Refined logo: circular gradient emblem on left, clean modern logotype on right with gradient fill. Editable text.</desc>
+
+  <defs>
+    <!-- smoother gradient across emblem & text -->
+    <linearGradient id="gradRef" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#64C2DB"/>
+      <stop offset="0.35" stop-color="#6FA9F0"/>
+      <stop offset="0.6" stop-color="#9B7BEF"/>
+      <stop offset="1" stop-color="#E56F8C"/>
+    </linearGradient>
+
+    <!-- smaller radial highlight for depth -->
+    <radialGradient id="gradRefHighlight" cx="30%" cy="30%" r="60%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- a simple mask to carve the stylized "S" negative space inside the circle -->
+    <mask id="sMask">
+      <rect width="100%" height="100%" fill="white"/>
+      <!-- the 'S' carved out as black in mask (subtracting from circle) -->
+      <path d="M190 140
+               C170 100, 230 100, 210 140
+               C190 180, 270 180, 230 220
+               C210 240, 160 230, 180 200
+               C200 170, 140 170, 190 140
+               Z" fill="black"/>
+    </mask>
+
+    <!-- a neutral fallback font-family suggested in style below -->
+    <style>
+      /* text uses system fonts; change in a code editor or CSS if you want a specific web font */
+      .logotype { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; letter-spacing: -0.5px; }
+    </style>
+  </defs>
+
+  <!-- background (transparent) -->
+  <rect width="100%" height="100%" fill="transparent"/>
+
+  <!-- left emblem: circle with gradient, masked to create a smooth 'S' negative shape -->
+  <g transform="translate(80,60) scale(1)">
+    <!-- main circle with linear gradient -->
+    <circle cx="220" cy="140" r="120" fill="url(#gradRef)"/>
+    <!-- highlight overlay -->
+    <circle cx="220" cy="140" r="120" fill="url(#gradRefHighlight)"/>
+    <!-- carve the 'S' negative space using the mask (white area remains) -->
+    <g mask="url(#sMask)">
+      <!-- a slightly darker rim to emphasize shape -->
+      <circle cx="220" cy="140" r="120" fill="rgba(0,0,0,0.03)"/>
+    </g>
+    <!-- optional thin ring for crisp edge -->
+    <circle cx="220" cy="140" r="120" fill="none" stroke="rgba(0,0,0,0.05)" stroke-width="1"/>
+  </g>
+
+  <!-- Right: logotype, uses the same gradient as a fill -->
+  <!-- The text is live (not converted to paths) so you can edit the name/font easily -->
+  <g transform="translate(420,120)">
+    <defs>
+      <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#64C2DB"/>
+        <stop offset="0.5" stop-color="#9B7BEF"/>
+        <stop offset="1" stop-color="#E56F8C"/>
+      </linearGradient>
+    </defs>
+
+    <text x="0" y="85" font-size="88" class="logotype" fill="url(#textGrad)">Michael</text>
+    <text x="0" y="175" font-size="88" class="logotype" fill="url(#textGrad)">Sanchez</text>
+  </g>
+</svg>

@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
-* Browsers: last 4 version
+* Browsers: last 2 version
 */
 
 /*
@@ -14,57 +14,52 @@ hyperlink  #2b786c;
 button #357b70
 secondary button #e0b354
 */
+:root{
+	--background: #ffebcd;
+	--active-link: #489c79;
+	--visited-link: #5b056e;
+	--hyperlink:  #2b786c;
+	--button: #357b70;
+	--button-txt: white;
+	--secondary-button: #e0b354;
+	--secondary-btntxt: #2b2b2b;
+	--primary-font: 'Roboto', sans-serif;
+	--fontsize:18px;
+}
 body {
-	background-color: #ffebcd;
-	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
+	background-color: var(--background);
+	font-family: var(--primary-font);
+	font-size: var(--fontsize);
 	line-height:normal;
 	padding: 30px;
 }
 a {
-	color: #2b786c;
+	color: var(--hyperlink);
 	
 }
+
 a:hover {
 	/* removes underline when hovering on link*/
 	text-decoration:none;
 }
 a:visited {
 	/*visited link*/
-	color: #5b056e;
+	color: var(--visited-link);
 }
 a:active {
 	/* selected link*/
-	color:#489c79;
+	color:var(--active-link);
 }
-button {
-	/*Overwrites browser and resets the border*/
-	border: none;
-	display: inline-block;
-	/* takes font from outer container */
-	font-family: 'Roboto', sans-serif;
-	/*styles the background color, font color, and text decoration (underline/bold etc) of button */
-	background-color: #357b70;
-	color: white;
-	text-decoration: none;
-	/* adds spacing to the button*/
-	padding: 10px;
-	border-radius: 3px;
-	/*gives button bottom border in RGBA format */
-	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-	-webkit-transition: 0.2s opacity;
-	-o-transition: 0.2s opacity;
-	transition: 0.2s opacity;
-}
+button,
 .button {
 	/*Overwrites browser and resets the border*/
 	border: none;
 	display: inline-block;
 	/* takes font from outer container */
-	font-family: 'Roboto', sans-serif;
+	font-family: var(--primary-font);
 	/*styles the background color, font color, and text decoration (underline/bold etc) of button */
-	background-color: #357b70;
-	color: white;
+	background-color: var(--button);
+	color: var(--button-txt);
 	text-decoration: none;
 	/* adds spacing to the button*/
 	padding: 10px;
@@ -72,7 +67,6 @@ button {
 	/*gives button bottom border in RGBA format */
 	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 	-webkit-transition: 0.2s opacity;
-	-o-transition: 0.2s opacity;
 	transition: 0.2s opacity;
 }
 button:hover, button :focus,
@@ -83,8 +77,8 @@ button:hover, button :focus,
 	opacity: 0.8;
 }
 .button_secondary{
-	background-color: #e0b354;
-	color: #2b2b2b; 
+	background-color: var(--secondary-button);
+	color: var(--secondary-btntxt);	
 }
 .navigation-list {
 	display: -webkit-inline-box;
@@ -100,7 +94,7 @@ button:hover, button :focus,
 }
 .container a
 {
-    color: #2b786c;
+    color: var(--hyperlink);
     text-decoration: none;
     margin: 0px 10px;
 	padding: 0px 10px;
@@ -108,30 +102,16 @@ button:hover, button :focus,
     z-index: 0;
     cursor: pointer;
 }
-.pullUpDown a:before
+.pullUpDown a:before, .pullUpDown a:after
 {
     position: absolute;
     width: 100%;
     height: 2px;
     left: 0px;
     content: '';
-    background: #2b786c;
+    background: var(--hyperlink);
     opacity: 0.3;
     -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-.pullUpDown a:after
-{
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0px;
-    content: '';
-    background: #2b786c;
-    opacity: 0.3;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -189,12 +169,28 @@ button:hover, button :focus,
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
   }
-  .project-photo{
-	width: 40%;
-	height: 40%;
-	min-width: 100px;
-	min-height: 100px;
-  }
+.project-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.project-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: var(--button);
+    color: var(--button-txt);
+    border-radius: 4px;
+    text-decoration: none;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.project-links a:hover {
+    background-color: var(--active-link);
+}
+
   /* .social_media{
 	
   } */
@@ -224,18 +220,36 @@ button:hover, button :focus,
   }
   /*grid fallback end */
  @supports (display: grid){
-  .grid{
-	display: -ms-grid;
-	display: grid;
-	-ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 20px;
-  }
-.grid_item{
-	background-color: lightgray;
-	width: auto;
-	min-height: auto;
+.grid_item {
+  background-color: #f9fafb; /* change this to #ffffff or #f0f4f8 if you prefer */
+  border-radius: 12px;       /* rounded corners */
+  padding: 20px;
+  -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+          box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* soft shadow */
+  -webkit-transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
 }
+
+.grid_item:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px); /* lift on hover */
+  -webkit-box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* deeper shadow on hover */
+}
+
+.grid_item h2 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.grid_item p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
 }
 .work_header {
 	text-align: center;
@@ -248,7 +262,10 @@ button:hover, button :focus,
 }
 @media all and (max-width: 750px){
 	.grid{
-		grid-gap: 10px;
+		-ms-grid-columns: 1fr 15px 1fr;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 15px;
+        padding: 0 10px;
 	}
 	.grid_item:last-child{
 		grid-column: auto / auto;
@@ -258,16 +275,17 @@ button:hover, button :focus,
 		font-size: 22px;
 	}
 }
-@media all and (max-width: 750px){
+/* @media all and (max-width: 750px){
 	.grid{
-		-ms-grid-columns: 1fr 10px 1fr;
 		grid-template-columns: 1fr 1fr;
 	}
-}
+} */
 @media all and (max-width:500px){
 	.grid{
 		-ms-grid-columns: 1fr;
 		grid-template-columns: 1fr;
+		grid-gap: 10px;
+        padding: 0 5px;
 	}
 	.page-header{
 		-ms-flex-line-pack: center;
@@ -308,6 +326,9 @@ button:hover, button :focus,
 	}
 	.logo{
 		padding-left: 40px;
+  		max-width: 100%;   /* scales down if container is smaller */
+  		height: auto;      /* maintains aspect ratio */
+  		display: block;    /* optional: remove inline spacing */
 	}
 }
 @-webkit-keyframes color-change{
@@ -395,10 +416,8 @@ button:hover, button :focus,
 	        animation: 4s color-change infinite alternate linear;
 	position: relative;
 	-webkit-transform-origin: bottom right;
-	    -ms-transform-origin: bottom right;
 	        transform-origin: bottom right;
 	-webkit-transform: rotate(360deg);
-	    -ms-transform: rotate(360deg);
 	        transform: rotate(360deg);
 	-webkit-animation: 20s sunset infinite ease-in-out;
 	        animation: 20s sunset infinite ease-in-out;
@@ -406,10 +425,8 @@ button:hover, button :focus,
 .sun-ring {
 	position: relative;
 	-webkit-transform-origin: bottom right;
-	    -ms-transform-origin: bottom right;
 	        transform-origin: bottom right;
 	-webkit-transform: rotate(360deg);
-	    -ms-transform: rotate(360deg);
 	        transform: rotate(360deg);
 	-webkit-animation: 20s sunset infinite ease-in-out;
 	        animation: 20s sunset infinite ease-in-out;

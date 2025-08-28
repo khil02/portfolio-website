@@ -1,116 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Work Display page</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
-        <!--Normalizer-->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" type="text/css" href="css/styles.production.css">
-    </head>
-    <body>
-        <header class="page-header">
-            <a href="./index.html"> <img src="./img/logoipsum-289.svg" class="page-header_item logo" alt="logo" ></a>
-            <nav class="main-navigation page-header_item container pullUpDown">
-                <ul role="menubar" class="navigation-list">
-                    <li role="presentation">
-                        <a role="menuitem" class="navigation-list_item" href="./index.html">Home </a>
-                    </li>
-                    <li role="presentation">
-                        <a role="menuitem" class="navigation-list_item" href="./about.html">About Me</a>
-                    </li>
-                    <li role="presentation">
-                        <a role="menuitem" class="navigation-list_item navigation-list_item--active" href="./work.html">Work </a>
-                    </li>
-                    <li role="presentation">
-                        <a role="menuitem" class="navigation-list_item" href="./contact.html">Contact </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section>
-                <h1 class="work_header">Work</h1>
-                <div class="grid">
-                    <div class="grid_item">
-                        <a href="https://khil02.github.io/simple-js-app/">
-                        <h2>Project 1 - PokeDex</h2>
-                        <img src="./img/Simple-js-app.png" class="project-photo" alt="screenshot of simple JS pokedex app"></a>
-                        <p>A JavaScript app that communicates with an external API. Using modals to display details of pokemon, has a search feature, and selector for the different generations.</p>
-                        <a href="https://khil02.github.io/simple-js-app/">PokeDex</a>
-                        <br/>
-                        <a href="https://github.com/khil02/simple-js-app">gitHub</a>
-                    </div>
-                    <div class="grid_item">
-                        <a href="https://khil02.github.io/To-Do-List-App/">
-                        <h2>Project 2 - To Do list</h2>
-                        <img src="./img/To-do-list.png" class="project-photo" alt="screenshot of To-Do list app"></a>
-                        <p>A RESTful API coded from scratch using Node.js. Allows you to add items to a list, double clicking strikes through, drag and drop to reorder and click the "x" to delete</p>
-                        <a href="https://khil02.github.io/To-Do-List-App/">To-Do-List</a>
-                        <br/>
-                        <a href="https://github.com/khil02/To-Do-List-App">gitHub</a>
-                    </div>
-                    <div class="grid_item">
-                        <a href="https://myflix-sanchez.netlify.app/">
-                        <h2>Project 3 - myFlix movie api with React frontend</h2>
-                        <img src="./img/myFlix.png" class="project-photo" alt="screenshot of myFlix website"></a>
-                        <p>A client-side frontend for your RESTful API, built with React. Allows a user to register and login to database of movies, where they can view information about movies, search them, and add them to their favorite list.</p>
-                        <a href="https://myflix-sanchez.netlify.app/">myFlix</a>
-                        <br/>
-                        <a href="https://github.com/khil02/myFlix-client">Client - gitHub</a>
-                        <br/>
-                        <a href="https://github.com/khil02/movie_api">API - gitHub</a>
-                    </div>
-                    <div class="grid_item">
-                        <a href="https://khil02.github.io/meet/">
-                        <h2>Project 4 - Meet App</h2>
-                        <img src="./img/Meet-app.png" class="project-photo" alt="screenshot of meet app"> </a>
-                        <p>A serverless, progressive web app that fetches data from the Google Calendar API. Allows a user to filter, search and visualize events pulled from Google Calendar</p>
-                        <a href="https://khil02.github.io/meet/">Meet App</a>
-                        <br/>
-                        <a href="https://github.com/khil02/meet">gitHub</a>
-                        <p>Description: A serverless progressive web appllication built with React using a -test driven development technique.</p>
-                        <p>Tools Used:
-                            React
-                            Jest/Cucumber
-                            Puppeteer
-                            Google Calendar API [&] OAuth
-                            Amazon Webservices (AWS Lambda)
-                            Atatus
-                            Rechart
-                        </p>
-                    </div>
-                    <div class="grid_item">
-                        <a href="https://github.com/khil02/Chat">
-                        <h2>Project 5 - Chat App</h2>
-                        <img src="./img/Chat-app.png" class="project-photo" alt="screenshot of chat app"> </a>
-                        <p>A JavaScript chat app built with React Native, featuring advanced functionality such as offline storage or geolocation. Allows for personalize through a selection of colors schemes. Allows users to send messages, record or upload videos, photos and share location with users of the app.</p>
-                        <a href="https://github.com/khil02/Chat">gitHub</a>
-                    </div>
-                    <div class="grid_item">
-                        <a href="https://khil02.github.io/myFlix-Angular-client/welcome">
-                        <h2>Project 6 - myFlix API with Angular frontend</h2>
-                        <img src="./img/myFlix-Angular.png" class="project-photo" alt="screenshot of myFlix Angular version"> </a>
-                        <p>A version of my React myFlix app, built with Angular. Using the same api but with Angular, allows a user to register and login to database of movies, where they can view information about movies, and add them to their favorite list.</p>
-                        <a href="https://khil02.github.io/myFlix-Angular-client/welcome">myFlix-Angular</a>
-                        <br/>
-                        <a href="https://github.com/khil02/myFlix-Angular-client">gitHub</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work</title>
+    <link rel="stylesheet" href="css/styles.production.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="page-header">
+        <a href="./index.html"><img src="./img/logoipsum-289.svg" class="page-header_item logo" alt="logo"></a>
+
+        <nav class="main-navigation page-header_item container pullUpDown">
+            <ul role="menubar" class="navigation-list">
+                <li><a role="menuitem" class="navigation-list_item" href="./index.html">Home</a></li>
+                <li><a role="menuitem" class="navigation-list_item" href="./about.html">About Me</a></li>
+                <li><a role="menuitem" class="navigation-list_item navigation-list_item--active" href="./work.html">Work</a></li>
+                <li><a role="menuitem" class="navigation-list_item" href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h1 class="work_header">My Work</h1>
+            <div class="grid">
+
+                <!-- Project 1 -->
+                <div class="grid_item">
+                    <a href="https://khil02.github.io/simple-js-app/">
+                        <img src="./img/Simple-js-app.png" alt="Screenshot of simple JS PokeDex app" class="project-photo">
+                    </a>
+                    <h2>PokeDex</h2>
+                    <p>A JavaScript app that communicates with an external API. Features modals to display Pokémon details, search, and generation selector.</p>
+                    <div class="project-links">
+                        <a href="https://khil02.github.io/simple-js-app/">Live Demo</a>
+                        <a href="https://github.com/khil02/simple-js-app">GitHub</a>
                     </div>
                 </div>
-            </section>
-        </main>
-        <footer class="page_footer"> <!--finish creating socials-->
-            <p>Find me on</p>
-            <div class="social_media">
-                <a href="https://github.com/khil02"><img src="./img/github_icon.svg" alt="Github"></a>
-                <a href="https://twitter.com/khil01"><img src="./img/twitter_icon.svg" alt="Twitter"></a>
-                <a href="https://www.linkedin.com/in/michael-sanchez-profile/"><img src="./img/linkedin_icon.svg" alt="LinkdIn"></a>
+
+                <!-- Project 2 -->
+                <div class="grid_item">
+                    <a href="https://khil02.github.io/To-Do-List-App/">
+                        <img src="./img/To-do-list.png" alt="Screenshot of To-Do List app" class="project-photo">
+                    </a>
+                    <h2>To-Do List</h2>
+                    <p>A RESTful API built with Node.js. Add items, strike through with double click, drag-and-drop to reorder, and delete with "x".</p>
+                    <div class="project-links">
+                        <a href="https://khil02.github.io/To-Do-List-App/">Live Demo</a>
+                        <a href="https://github.com/khil02/To-Do-List-App">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="grid_item">
+                    <a href="https://myflix-sanchez.netlify.app/">
+                        <img src="./img/myFlix.png" alt="Screenshot of myFlix website" class="project-photo">
+                    </a>
+                    <h2>myFlix - React Frontend</h2>
+                    <p>React client for a movie REST API. Register/login, search, view movie info, and add to favorites.</p>
+                    <div class="project-links">
+                        <a href="https://myflix-sanchez.netlify.app/">Live Demo</a>
+                        <a href="https://github.com/khil02/myFlix-client">Client GitHub</a>
+                        <a href="https://github.com/khil02/movie_api">API GitHub</a>
+                        <a href="myFlix-React-Case-Study.pdf">Case Study</a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="grid_item">
+                    <a href="https://khil02.github.io/meet/">
+                        <img src="./img/Meet-app.png" alt="Screenshot of Meet App" class="project-photo">
+                    </a>
+                    <h2>Meet App</h2>
+                    <p>Serverless PWA using Google Calendar API. Filter, search, and visualize events.</p>
+                    <div class="project-links">
+                        <a href="https://khil02.github.io/meet/">Live Demo</a>
+                        <a href="https://github.com/khil02/meet">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="grid_item">
+                    <a href="https://github.com/khil02/Chat">
+                        <img src="./img/Chat-app.png" alt="Screenshot of Chat App" class="project-photo">
+                    </a>
+                    <h2>Chat App</h2>
+                    <p>React Native chat app with offline storage, geolocation, and media sharing. Users can personalize color schemes.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/khil02/Chat">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="grid_item">
+                    <a href="https://khil02.github.io/myFlix-Angular-client/welcome">
+                        <img src="./img/myFlix-Angular.png" alt="Screenshot of myFlix Angular version" class="project-photo">
+                    </a>
+                    <h2>myFlix - Angular Frontend</h2>
+                    <p>Angular version of myFlix app. Same API functionality: register/login, view movies, add to favorites.</p>
+                    <div class="project-links">
+                        <a href="https://khil02.github.io/myFlix-Angular-client/welcome">Live Demo</a>
+                        <a href="https://github.com/khil02/myFlix-Angular-client">GitHub</a>
+                    </div>
+                </div>
+
             </div>
-        </footer>
-        <script src="js/tota11y.min.js"></script>
-    </body>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page_footer">
+        <p>Find me on</p>
+        <div class="social_media">
+            <a href="https://github.com/khil02"><img src="./img/github_icon.svg" alt="Github"></a>
+            <a href="https://www.linkedin.com/in/michael-sanchez-profile/"><img src="./img/linkedin_icon.svg" alt="LinkedIn"></a>
+        </div>
+    </footer>
+
+</body>
 </html>
