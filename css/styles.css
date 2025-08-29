@@ -154,9 +154,16 @@ button:hover, button :focus,
   }
 .project-photo {
     width: 100%;
-    height: auto;
+    height: 180px;
+    max-width: 300px;   /* prevents images from becoming too wide */
+    max-height: 200px;  /* prevents images from becoming too tall */
+    object-fit: cover;  /* keeps aspect ratio, crops if needed */
+    margin: 0 auto 10px; /* centers image & adds spacing below */
     border-radius: 5px;
-    margin-bottom: 10px;
+
+}
+.project-links {
+	margin-top: auto;
 }
 .project-links a {
     display: inline-block;
@@ -188,20 +195,52 @@ button:hover, button :focus,
 	flex-grow: 1;
 	text-align: right;
   }
+
+	.logo{
+		padding-left: 20px;
+		width: 240px;
+  		max-width: 100%;   /* scales down if container is smaller */
+  		height: auto;      
+  		display: block;    /* optional: remove inline spacing */
+	}  
+
   /*grid fallback start*/
-  .grid_item{
+
+  @supports not (display: grid){
+.grid_item{
 	display: inline-block;
 	width: 33%;
 	text-align: center;
+  	}
   }
   /*grid fallback end */
+
+
+
+
  @supports (display: grid){
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* default: 3 columns */
+  gap: 20px;
+  align-items: stretch; 
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .grid_item {
-  background-color: #f9fafb; /* change this to #ffffff or #f0f4f8 if you prefer */
+  background-color: #7cb89f; /*   #f9fafb change this to #ffffff or #f0f4f8 if you prefer */
   border-radius: 12px;       /* rounded corners */
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* soft shadow */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .grid_item:hover {
@@ -212,9 +251,11 @@ button:hover, button :focus,
 .grid_item h2 {
     margin-bottom: 10px;
     font-size: 1.3rem;
+	text-align: center;
 }
 
 .grid_item p {
+	flex-grow: 1;
     margin-bottom: 12px;
     font-size: 0.95rem;
     line-height: 1.4;
@@ -223,6 +264,7 @@ button:hover, button :focus,
 }
 .work_header {
 	text-align: center;
+	color: #378464;
 }
 .standard-label{
 	display: flex;
@@ -242,11 +284,13 @@ button:hover, button :focus,
 		font-size: 22px;
 	}
 }
-/* @media all and (max-width: 750px){
-	.grid{
-		grid-template-columns: 1fr 1fr;
-	}
-} */
+@media all and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+    gap: 15px;
+    padding: 0 10px;
+  }
+}
 @media all and (max-width:500px){
 	.grid{
 		grid-template-columns: 1fr;
@@ -272,12 +316,7 @@ button:hover, button :focus,
 	.navigation-list li {
 		margin-left: 0;
 	}
-	.logo{
-		padding-left: 40px;
-  		max-width: 100%;   /* scales down if container is smaller */
-  		height: auto;      /* maintains aspect ratio */
-  		display: block;    /* optional: remove inline spacing */
-	}
+
 }
 @keyframes color-change{
 	0% {
