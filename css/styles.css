@@ -25,10 +25,20 @@ body {
 	font-size: var(--fontsize);
 	line-height:normal;
 	padding: 30px;
+
+	max-width: 1200px;
+	align-content: center;
+	margin: auto;
+	
 }
 a {
 	color: var(--hyperlink);
 	
+}
+
+.text-block {
+	max-width: 1000px;
+	align-content: center;
 }
 
 a:hover {
