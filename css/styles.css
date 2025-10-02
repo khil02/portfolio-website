@@ -35,6 +35,15 @@ a {
 	color: var(--hyperlink);
 	
 }
+.skill-list {
+  list-style-type: none; /* removes bullets */
+  padding-left: 0;       /* removes extra indent */
+  margin: 0;             /* optional: removes extra margin */
+}
+.skill-list li {
+  margin-bottom: 0.5rem; /* space between items for readability */
+}
+
 
 .text-block {
 	max-width: 1000px;
